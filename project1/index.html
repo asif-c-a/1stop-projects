@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Russo One">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjord One">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+	<title>The DeLorean Time Machine</title>
+</head>
+<body>
+
+	<style>
+		body {
+			background: #383838;
+			color: #d9d9d9;
+			font-family: "Fjord One";
+		}
+
+		.brand {
+			width: 100px;
+			font-family: "Russo One";
+		}
+
+		.icon-med {
+			font-size: 50px;
+			color: #4980e6;
+		}
+
+		.remove-bullets {
+			list-style: none
+		}
+
+		.remove-text-decoration {
+			text-decoration: none;
+		}
+
+		.team-card-img {
+			max-width: 100%;
+			height: 240px;
+			aspect-ratio: 1/1;
+
+			object-fit: cover;
+			overflow: hidden;
+		}
+
+		.navbar-color {
+			background: #d9d9d9;
+		}
+
+		.subheading {
+			font-weight: bolder;
+		}
+
+		.anim {
+			filter: grayscale();
+			scale: 100%;
+
+			overflow: hidden;
+
+			transition-property: filter, scale;
+			transition-duration: .2s, .2s;
+			transition-delay: 0, 0;
+		}
+
+		.anim:hover {
+			filter: none;
+			scale: 110%;
+
+			transition-property: filter, scale;
+			transition-duration: .2s, .2s;
+			transition-delay: 0, 0;
+		}
+
+		.dark-card-outline {
+			border-style: solid;
+			border-color: none;
+		}
+
+		.dark-card-outline:hover {
+			border-style: solid;
+			border-color: white;
+		}
+
+		.dark-card {
+			background: #262626;
+			color: #4980e6;
+		}
+
+		.med-card {
+			background: #d9d9d9;
+		}
+
+		.back-two {
+			background: #424242;
+		}
+
+	</style>
+
+
+	<header>
+		<div class="navbar navbar-expand-lg navbar-color">
+			<div class="container-fluid">
+				<a href="#" class="navbar-brand">
+					<div class="brand">
+						DMC
+					</div>
+				</a>
+
+				<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar1">
+					<i class="bi bi-list"></i>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbar1">
+					<div class="navbar-nav ms-auto">
+						<a href="#" class="nav-item nav-link active">Home</a>
+						<div class="nav-item dropdown">
+							<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About The DTM</a>
+							<div class="dropdown-menu">
+								<a href="#about" class="dropdown-item">About</a>
+								<a href="#team" class="dropdown-item">Team</a>
+								<a href="https://asif-c-a.github.io" class="dropdown-item">Developer</a>
+							</div>
+						</div>
+						<a href="#contact" class="nav-item nav-link">Contact Us</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="carousel" class="carousel slide">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+				<button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+				<button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active" style="width:100vw; height: 95vh;">
+					<img src="https://www.motortrend.com/uploads/2022/03/1982_DeLorean_DMC-12_Time_Machine_Mecum_10.jpg?w=768&width=768&q=75&format=webp" class="d-block w-100" alt="carousel 1"  style="object-fit: cover; overflow: hidden;">
+				</div>
+				<div class="carousel-item" style="width:100vw; height: 95vh;">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/DeLorean_Replica_Kovacs_Time_Machine.png" alt="carousel 2"  style="width: 100vw; height: 100vh; object-fit: cover; overflow: hidden;">
+				</div>
+				<div class="carousel-item" style="width:100vw; height: 95vh;">
+					<img src="https://preview.redd.it/i-have-a-question-if-the-delorean-time-machine-existed-even-v0-afssmhdif8kd1.png?auto=webp&s=3c396d6e11f255a269bbe520bab3155c38db7b3b" alt="carousel 3" style="width: 100vw; height: 100vh; object-fit: cover; overflow: hidden;">
+				</div>
+
+				<button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon"></span>
+				</button>
+
+				<button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+					<span class="carousel-control-next-icon"></span>
+				</button>
+
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section class="container mt-5 pt-4" id="about">
+			<h6 class="display-6 text-center subheading">About</h6>
+			<div class="row pt-3">
+				<div class="col-md-5">
+					<div class="container">
+						<img src="https://hagerty-media-prod.imgix.net/2021/12/BTTF-DeLorean-CATC-2021-Hagerty-Drivers-Foundation-01-scaled.jpg?auto=format%2Ccompress&ixlib=php-3.3.0" class="d-block w-100">
+					</div>
+				</div>
+				<div class="col-md-7">
+					<p class="text-white-50">
+						The DeLorean Time Machine. A modified DMC-12 capable of travelling through time. Documented through a seried of 3 motion pictures.
+					</p>
+
+					<p style="color: #d9d9d9;">
+						The DeLorean Time Machine is capable of going to any point in time given enough speed (approximately 88mph, or 142 kmph) is maintained throughout the journey. Being a modified version of DeLorean Motor Company's DMC-12, it sports a stylish futuristic-retro look paired with a reliable chassis holding all the required equipped for time travel. A Flux Capacitor, and a Plutonium Powered Reactor are the main elements for Time Travel. It is stacked with features like Gull-Wing Doors, Vents, and Flight Thrusters. It also stored high tech gadgets like the HooverBoard, the Nike Air Mag 'Self Tying Shoes' and Smart Glasses.
+					</p>
+				</div>
+			</div>
+
+			<div class="row pt-4 pb-4 mt-5 back-two">
+				<h6 class="display-6 text-center mb-3 subheading">What Makes us Unique</h6>
+				<div class="col-md-4">
+					<div class="container text-center">
+						<span class="bi bi-person icon-med"></span>
+						<p>Takes person through time.</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="container text-center">
+						<span class="bi bi-shield-shaded icon-med"></span>
+						<p>Protects user during travel.</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="container text-center">
+						<span class="bi bi-car-front icon-med"></span>
+						<p>Its a car.</p>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<section id="team" class="container mt-5 pt-4 subheading">
+			<h6 class="display-5 text-center">The Team</h6>
+			<div class="container my-4">
+				<div class="row">
+					<div class="col-md-4 d-flex align-items-center justify-content-center anim">
+						<div class="card dark-card dark-card-outline" style="width:300px; border-radius: 1px;">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAmBnrDDp6VoKvDRr48_rJStIKXbGOjDN4tw&s" class="team-card-img">
+							<div class="card-body text-center">
+								<h4 class="card-title">Doc Brown</h4>
+								<p class="card-text">Emmet "Doc" Brown invented the DeLorean Time Machine by applying modifications to the DeLorean DMC-12</p>
+								<i class="bi bi-instagram"></i>
+								<i class="bi bi-facebook"></i>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 d-flex align-items-center justify-content-center anim">
+						<div class="card dark-card dark-card-outline" style="width:300px; border-radius: 1px;">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkhQqKuLpCF8dXu0MasNiLF_IstnOLMSiv1hnKiC2vaFvZunsAsnzpysaVnuGE1eusVCM&usqp=CAU" class="team-card-img">
+							<div class="card-body text-center">
+								<h4 class="card-title">Marty McFly</h4>
+								<p class="card-text">Marty McFly is a high school student who rides the DeLorean Time Machine to alter the past with Doc Brown.</p> 
+								<i class="bi bi-instagram"></i>
+								<i class="bi bi-clock-history"></i>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 d-flex align-items-center justify-content-center anim">
+						<div class="card dark-card dark-card-outline" style="width:300px; border-radius: 1px;">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm4vxBrSgzF6NYesvZUgbJXyh_XUjLax0vRA&s" class="team-card-img">
+							<div class="card-body text-center">
+								<h4 class="card-title">Biff Tannen</h4>
+								<p class="card-text">Bufford "Biff" Howard Tannen was the main antagonist in the second installment of Back To the Future. (But plays in all 3)</p>
+								<i class="bi bi-wifi-off"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact" class="container pt-4 mt-5">
+			<h6 class="display-5 text-center subheading">Contact Us</h6>
+			<div class="row">
+				<div class="col-md-6">
+					<p class="text-center fs-3 fw-bold">Here's our Contact Info</p>
+					<div class="card shadow med-card" style="height: 87%;">
+						<div class="m-auto">
+							<div class="py-3">
+								<div class="text-black-s text-center fs-4">Our Email</div>
+								<div class="text-black-50 text-center fs-5">deloreanBTTF1985@gmail.com</div>
+							</div>
+							<div class="py-3">
+								<div class="text-black-s text-center fs-4">Our Phone Number</div>
+								<div class="text-black-50 text-center fs-5">555 4865</div>
+							</div>
+							<div class="py-3">
+								<div class="text-black-s text-center fs-4">Our Address</div>
+								<div class="text-black-50 text-center fs-5">Hill Valley, California</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="container">
+						<p class="text-center fs-3 fw-bold">Write to Us</p>
+						<div class="container">
+							<div class="card shadow med-card">
+								<div class="card-body">
+									<form>
+										<div class="form-group">
+											<label for="name" class="form-label">Enter your Name</label>
+											<input type="text" class="form-control" name="name" id="name">
+										</div>
+										<div class="form-group py-2">
+											<label for="email" class="form-label">Enter your E-Mail</label>
+											<input type="email" class="form-control" name="email" id="email">
+										</div>
+										<div class="form-group py-2">
+											<label for="subject" class="form-label">Enter the Subject</label>
+											<input type="text" class="form-control" name="subject" id="subject">
+										</div>
+										<div class="form-group pt-1 pb-2">
+											<textarea class="form-control" name="message" id="message">
+											</textarea>
+										</div>
+										<div class="form-group text-center">
+											<input type="submit" class="btn btn-outline-dark" value="Send Message">
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div> 
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer style="background: #262626;">
+		<div class="container py-5 mt-5">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="container">
+						<div style="font-family: Russo One; color: white;">
+							DMC
+						</div>
+						<div style="color: white;">
+							<p>DeLorean Motor Company X Back to The Future</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="container">
+						<div class="text-white fs-5">Quick Links</div>
+						<div>
+							&nbsp&nbsp&nbsp&nbsp<a href="delorean.com" class="remove-text-decoration text-white">DeLorean Motor Company</a><br>
+							&nbsp&nbsp&nbsp&nbsp<a href="backtothefuture.com" class="remove-text-decoration text-white">Back to The Future</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
