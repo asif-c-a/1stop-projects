@@ -9,12 +9,41 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
 
 	<title>Expense Tracker</title>
+
+	<style>
+		.dgreen {
+			background-color: #00303b;
+		}
+
+		.oryell-border {
+			border-color: #ffce96;
+		}
+
+		.pink {
+			background-color: #ff7777;
+		}
+
+		.oryell {
+			color: #ffce96;
+			border-color: #ffce96;
+		}
+
+		.oryell:hover {
+			background-color: #ffce96;
+			color: #f1f2da;
+			border-color: #ffce96;
+		}
+
+		.text {
+			color: #f1f2da;
+		}
+	</style>
 </head>
-<body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<body class="dgreen text">
+	<nav class="navbar navbar-expand-lg navbar-light pink">
 		<div class="container-fluid">
 			<div class="logo">
-				<a href="#" class="navbar-brand">ExMoni</a>
+				<a href="#" class="navbar-brand fw-bold">ExMoni</a>
 			</div>
 			<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
 				<li class="bi bi-list"></li>
@@ -30,8 +59,8 @@
 	<div class="container p-5">
 		<div class="mb-3">
 			<div class="float-end">
-				<button type="button" class="btn btn-outline-primary" onclick="showExpenseModal()">Add Expense</button>
-				<button type="button" class="btn btn-outline-danger" onclick="showResetModal()">Reset</button>
+				<button type="button" class="btn btn-outline-primary oryell" onclick="showExpenseModal()">Add Expense</button>
+				<button type="button" class="btn btn-danger pink" onclick="showResetModal()">Reset</button>
 			</div>
 
 			<div class="float-start">
@@ -63,7 +92,7 @@
 
 	<div class="modal fade" id="addExpenseModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addExpenseModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
-			<div class="modal-content">
+			<div class="modal-content dgreen oryell-border">
 				<form id="addExpenseForm">
 					<div class="modal-header">
 						<h5 class="modal-title" id="addExpenseModalLabel">Add Expense</h5>
@@ -84,8 +113,8 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-						<button type="button" class="btn btn-primary" onclick="saveExpense();">Add Expense</button>
+						<button type="button" class="btn btn-secondary pink" data-bs-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-outline-primary oryell" onclick="saveExpense();">Add Expense</button>
 					</div>
 				</form>
 			</div>
@@ -94,13 +123,13 @@
 
 	<div class="modal fade" id="resetWarning" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="resetWarning" aria-hidden="true">
 		<div class="modal-dialog">
-			<div class="modal-content">
+			<div class="modal-content dgreen oryell-border">
 				<div class="modal-header">
 					<p class="alert-warning">You are about to reset your expenditure log. Are you sure?</p>
 				</div>
 				<div class="modal-footer">
-					<button class="btn btn-outline-secondary" data-bs-dismiss="modal">No, Cancel</button>
-					<button class="btn btn-outline-danger" onclick="resetData()">Yes, Reset</button>
+					<button class="btn btn-outline-secondary oryell" data-bs-dismiss="modal">No, Cancel</button>
+					<button class="btn btn-danger pink" onclick="resetData()">Yes, Reset</button>
 				</div>
 			</div>
 		</div>
